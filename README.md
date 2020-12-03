@@ -10,10 +10,13 @@ I have an error when installing sshpass with it expecting gsed rather than sed. 
     ln -s /usr/local/bin/gsed gsed
 
 
-`brew create --force http://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz`
-`brew install sshpass`
+
+### 因为 checksum 安装失败
+    brew create --force http://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz
+    brew install sshpass
 
 
+### 手动编译安装
 ```bash
 ./configure --disable-debug --disable-dependency-tracking --disable-silent-rules --prefix=/usr/local/Cellar/sshpass/1.06
 
